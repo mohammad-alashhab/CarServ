@@ -20,7 +20,6 @@ namespace CarServ.Controllers
 
         public IActionResult Privacy()
         {
-            /*Mohammad Tariq*/
             
             /*Good Morning*/
             /* Good Morning */
