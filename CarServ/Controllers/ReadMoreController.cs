@@ -29,5 +29,9 @@ namespace CarServ.Controllers
         {
             return View();
         }
+        public IActionResult KIA()
+        {
+            return View();
+        }
     }
 }
