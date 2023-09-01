@@ -21,6 +21,7 @@ namespace CarServ.Controllers
         public IActionResult Privacy()
         {
             /*Mohammad Tariq*/
+            /* mansoor moqbel */
             return View();
         }
 
