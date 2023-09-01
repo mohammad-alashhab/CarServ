@@ -21,8 +21,26 @@ namespace CarServ.Controllers
         {
             return View();
         }
-
-
+        public IActionResult Services()
+        {
+            return View();
+        }
+        public IActionResult Booking()
+        {
+            return View();
+        }
+        public IActionResult Technicians()
+        {
+            return View();
+        }
+        public IActionResult Testimonial()
+        {
+            return View();
+        }
+        public IActionResult Contact()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
