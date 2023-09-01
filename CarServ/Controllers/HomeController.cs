@@ -17,14 +17,12 @@ namespace CarServ.Controllers
         {
             return View();
         }
-
-        public IActionResult Privacy()
+        public IActionResult About()
         {
-            
-            /*Good Morning*/
-            /* Good Morning */
             return View();
         }
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
