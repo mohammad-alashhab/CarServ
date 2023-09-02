@@ -1,4 +1,5 @@
-﻿@{
+﻿@model CarServ.Models.Contact
+@{
     ViewData["Title"] = "Contact";
     Layout = "~/Views/Shared/_Inner2Layout.cshtml";
 }
@@ -12,7 +13,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb justify-content-center text-uppercase">
                         <li class="breadcrumb-item"><a href="/Home/Index">Home</a></li>
-                        
+
                         <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
                     </ol>
                 </nav>
@@ -20,7 +21,6 @@
         </div>
     </div>
     <!-- Page Header End -->
-    
 }
 @section Inner3Section{
     <!-- Contact Start -->
@@ -66,32 +66,38 @@
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        @Html.TextBox("Name",null,new{@class = "form-control",id="name",placeholder="Your Name "})
-                                        @*<span asp-validation-for="YourName" class="text-warning"></span>*@
-                                        @*<input type="text" class="form-control" id="name" placeholder="Your Name">*@
-                                        @Html.Label("Your Name")
-                                        @* <label for="name">Your Name</label>*@
+                                        @Html.TextBox("FullName",null,new{@class = "form-control",id="name",placeholder="Your Name "})
+                                        @Html.Label("Your Full Name")
+                                        <span asp-validation-for="FullName" class="text-warning"></span>
+                                        @*<input type="text" class="form-control" id="name" placeholder="Your Name">
+                                        <label for="name">Your Name</label> *@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         @Html.TextBox("Email",null,new{@class = "form-control",id="email",placeholder="Your Email "})
-                                        @*<span asp-validation-for="YourName" class="text-warning"></span>*@
-                                        @*<input type="email" class="form-control" id="email" placeholder="Your Email">*@
                                         @Html.Label("Your Email")
-                                        @*<label for="email">Your Email</label>*@
+                                        <span asp-validation-for="Email" class="text-warning"></span>
+                                        @*<input type="email" class="form-control" id="email" placeholder="Your Email">
+                                        <label for="email">Your Email</label>*@
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
+                                        @Html.TextBox("Subject",null,new{@class = "form-control", id ="subject", placeholder ="Subject"})
+                                        @Html.Label("Subject")
+                                        <span asp-validation-for="Subject" class="text-warning"></span>
+                                        @* <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <label for="subject">Subject</label> *@
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
-                                        <label for="message">Message</label>
+                                        @Html.TextArea("Message",null,new{@class = "form-control", placeholder = "Leave a message here", id = "message", style = "height: 100px"})
+                                        @Html.Label("Message")
+                                        <span asp-validation-for="Message" class="text-warning"></span>
+                                        @* <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                        <label for="message">Message</label> *@
                                     </div>
                                 </div>
                                 <div class="col-12">
