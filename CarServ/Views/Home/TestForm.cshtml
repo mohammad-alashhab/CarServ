@@ -1,0 +1,75 @@
+﻿@model CarServ.Models.Booking
+@{
+    ViewData["Title"] = "TestForm";
+    Layout = "~/Views/Shared/_Inner2Layout.cshtml";
+}
+@section Inner2Section{
+    <h1>TestForm mansoor</h1>
+}
+@section Inner3Section{
+    <div class="container">
+        <div class="row gx-5">
+            <div class="col-lg-6">
+                <form>
+                    <div>
+                        @Html.ValidationSummary(false,"Please fix the following Error",new {@class="text-danger"})
+                    </div>
+                <table>
+                    <tr>
+                        <td></td>
+                        <td>
+                            @Html.TextBox("YourName")
+                            <span asp-validation-for="YourName" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            @Html.TextBox("Email")
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            @Html.DropDownList("Center",@Html.GetEnumSelectList<Center>())
+                            <span asp-validation-for="Center" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                                @Html.DropDownList("Service",@Html.GetEnumSelectList<Services>())
+                            <span asp-validation-for="Service" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            @Html.TextBox("ServiceDate", null, new { @class = "form-control border-0 datetimepicker-input", placeholder = "Service Date", data_target = "#date1", data_toggle = "datetimepicker", style = "height: 55px;" })
+                            <span asp-validation-for="ServiceDate" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            @Html.TextArea("SpecialRequest")
+                            <span asp-validation-for="SpecialRequest" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                            
+                            <td> <button type="submit">Send Order</button>  </td>
+                            <td> <input type="reset" value="Clear"></td>
+                    </tr>
+                </table>
+                
+
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+}
+
+

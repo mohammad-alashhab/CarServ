@@ -17,6 +17,10 @@ namespace CarServ.Controllers
         {
             return View();
         }
+        public IActionResult TestForm()
+        {
+            return View();
+        }
         public IActionResult About()
         {
             return View();
