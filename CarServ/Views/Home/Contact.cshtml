@@ -66,14 +66,20 @@
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
+                                        @Html.TextBox("Name",null,new{@class = "form-control",id="name",placeholder="Your Name "})
+                                        @*<span asp-validation-for="YourName" class="text-warning"></span>*@
+                                        @*<input type="text" class="form-control" id="name" placeholder="Your Name">*@
+                                        @Html.Label("Your Name")
+                                        @* <label for="name">Your Name</label>*@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
+                                        @Html.TextBox("Email",null,new{@class = "form-control",id="email",placeholder="Your Email "})
+                                        @*<span asp-validation-for="YourName" class="text-warning"></span>*@
+                                        @*<input type="email" class="form-control" id="email" placeholder="Your Email">*@
+                                        @Html.Label("Your Email")
+                                        @*<label for="email">Your Email</label>*@
                                     </div>
                                 </div>
                                 <div class="col-12">
