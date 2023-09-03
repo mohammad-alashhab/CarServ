@@ -327,12 +327,12 @@
                                     <span asp-validation-for="Email" class="text-warning"></span>
                                 </div>
                                 <div class="col-12 col-sm-6 form-floating">
-                                    @Html.DropDownList("Center",@Html.GetEnumSelectList<Center>(),new { @class = "form-select border-0",id="Center",style = "height: 55px;" })
+                                    @Html.DropDownList("Center",@Html.GetEnumSelectList<Center>(),"Select an option",new { @class = "form-select border-0",id="Center",style = "height: 55px;" })
                                     @Html.Label("Center")
                                     <span asp-validation-for="Center" class="text-warning"></span>
                                 </div>
                                 <div class="col-12 col-sm-6 form-floating">
-                                    @Html.DropDownList("Service",@Html.GetEnumSelectList<Services>(),new { @class = "form-select border-0",id="Service",style = "height: 55px;" })
+                                    @Html.DropDownList("Service",@Html.GetEnumSelectList<Services>(),"Select an Service",new { @class = "form-select border-0",id="Service",style = "height: 55px;" })
                                     @Html.Label("Service")
                                     <span asp-validation-for="Service" class="text-warning"></span>
                                 </div>
@@ -351,16 +351,16 @@
                                 </div>
 
                                 <div class="col-12 ">
-                                    @Html.Label("Delivery Payment",null,new{style="color:white;"})
-                                    @Html.RadioButton("Payment","Cash",true)@Html.Label("Cash",null,new{style="color:white;"})
-                                    @Html.RadioButton("Payment","Card")@Html.Label("Credit/Debit Card",null,new{style="color:white;"})
+                                    @Html.Label("Delivery Payment:",null,new{style="color:white;font-weight:bold; padding-right: 3%;"})
+                                    @Html.RadioButton("Payment","Cash",true)@Html.Label("Cash",null,new{style="color:white; padding-right: 3%;"})
+                                    @Html.RadioButton("Payment","Card")@Html.Label("Credit/Debit Card",null,new{style="color:white; padding-right: 30%;"})
                                     <span asp-validation-for="Payment" class="text-warning"></span>
                                 </div>
                                 <div class="col-12">
-                                    @Html.Label("Car Options",null,new{style="color:white;"})
+                                    @Html.Label("Car Options:",null,new{style="color: white; font-weight: bold; padding-right: 11%"})
 
                                     @Html.RadioButton("Car","Electric",true)@Html.Label("Electric",null,new{style="color:white;"})
-                                    @Html.RadioButton("Car","Hybrid")@Html.Label("Hybrid",null,new{style="color:white;"})
+                                    @Html.RadioButton("Car","Hybrid")@Html.Label("Hybrid",null,new{style="color:white; padding-right: 45%"})
 
 
                                 </div>

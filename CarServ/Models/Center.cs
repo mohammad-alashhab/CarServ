@@ -2,22 +2,33 @@
 {
     public enum Center
     {
-        aa,
-        bb,
-        cc,
-        dd,
-        ee,
-        ff,
-        jj,
+        NewYork,
+        LosAngeles,
+        Chicago,
+        Miami,
+        Houston,
+        SanFrancisco,
+        Boston,
+        Seattle,
+        Dallas,
+        Atlanta
 
     }
 
     public enum Services
     {
-        Service_1,
-        Service_2,
-        Service_3,
+        OilChange,          // Oil Change
+        BrakeRepair,        // Brake Repair
+        EngineTuneUp,       // Engine Tune-Up
+        TransmissionRepair, // Transmission Repair
+        TireRotation,       // Tire Rotation
+        ACRepair,           // AC Repair
+        WheelAlignment,     // Wheel Alignment
+        BatteryReplacement, // Battery Replacement
+        CarDetailing,       // Car Detailing
+        PaintProtection,    // Paint Protection
     }
+
 
     /*
       <select class="form-select border-0" style="height: 55px;">
