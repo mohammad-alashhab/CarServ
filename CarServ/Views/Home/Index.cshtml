@@ -351,16 +351,16 @@
                                 </div>
 
                                 <div class="col-12 ">
-                                    @Html.Label("Delivery Payment:",null,new{style="color:white;font-weight:bold; padding-right: 3%;"})
-                                    @Html.RadioButton("Payment","Cash",true)@Html.Label("Cash",null,new{style="color:white; padding-right: 3%;"})
-                                    @Html.RadioButton("Payment","Card")@Html.Label("Credit/Debit Card",null,new{style="color:white; padding-right: 30%;"})
+                                    @Html.Label("Delivery Payment:",null,new{style="color:white;font-weight:bold;"})
+                                    @Html.RadioButton("Payment","Cash",true)@Html.Label("Cash",null,new{style="color:white;"})
+                                    @Html.RadioButton("Payment","Card")@Html.Label("Credit/Debit Card",null,new{style="color:white;"})
                                     <span asp-validation-for="Payment" class="text-warning"></span>
                                 </div>
                                 <div class="col-12">
-                                    @Html.Label("Car Options:",null,new{style="color: white; font-weight: bold; padding-right: 11%"})
+                                    @Html.Label("Car Options:",null,new{style="color: white; font-weight: bold;"})
 
                                     @Html.RadioButton("Car","Electric",true)@Html.Label("Electric",null,new{style="color:white;"})
-                                    @Html.RadioButton("Car","Hybrid")@Html.Label("Hybrid",null,new{style="color:white; padding-right: 45%"})
+                                    @Html.RadioButton("Car","Hybrid")@Html.Label("Hybrid",null,new{style="color:white;"})
 
 
                                 </div>
