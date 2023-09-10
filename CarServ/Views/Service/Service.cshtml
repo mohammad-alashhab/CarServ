@@ -6,18 +6,20 @@
 
 @section InnerSection{
     <!-- Page Header Start -->
-    <div class="hide-for-large cell small-12 small-order-2" style="background-image: url(~/../../asset/images/Header-Services.jpg);">
-        <div class="container-fluid page-header-inner py-5">
-            <div class="container text-center">
-                <h1 class="display-3 text-white mb-3 animated slideInDown">Services</h1>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb justify-content-center text-uppercase">
-                        <li class="breadcrumb-item"><a href="/Home/Index">Home</a></li>
-
-                        <li class="breadcrumb-item text-white active" aria-current="page">Services</li>
-                    </ol>
-                </nav>
+    <div class="hide-for-large cell small-12 small-order-2" style="display: flex;">
+        <div style="flex: 5;">
+            <div class="container-fluid page-header-inner py-5" style="display: flex; background-color: #F6F6F4;">
+                <div class="container text-start m-lg-4">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown" style="font-size:40px;"><span class="text-black">Services</span></h1>
+                    <nav aria-label="breadcrumb" class="text-black" style="font-size:20px">
+                        <p>For technicians known for their work and their word, trust the experts at CarSer.</p>
+                        <a href="/Service/Booking/#book" class="btn btn-primary py-2 px-4">Booking</a>
+                    </nav>
+                </div>
             </div>
+        </div>
+        <div style="flex: 3;">
+            <img src="~/asset/images/Header-Services.jpg" alt="Image" style="width: 100%; height: 100%;">
         </div>
     </div>
     <!-- Page Header End -->
