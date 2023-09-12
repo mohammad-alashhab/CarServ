@@ -10,6 +10,7 @@ builder.Services.AddDbContext<CarServDbContext>(options => options.UseSqlServer(
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<CarServDbContext>();
 
 
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
