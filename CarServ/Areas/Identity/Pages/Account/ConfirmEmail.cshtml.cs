@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using CarServ.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -17,9 +16,9 @@ namespace CarServ.Areas.Identity.Pages.Account
 {
     public class ConfirmEmailModel : PageModel
     {
-        private readonly UserManager<CarServUser> _userManager;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public ConfirmEmailModel(UserManager<CarServUser> userManager)
+        public ConfirmEmailModel(UserManager<IdentityUser> userManager)
         {
             _userManager = userManager;
         }

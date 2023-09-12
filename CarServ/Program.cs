@@ -1,14 +1,14 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using CarServ.Data;
-using CarServ.Areas.Identity.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("CarServContextConnection") ?? throw new InvalidOperationException("Connection string 'CarServContextConnection' not found.");
 
-builder.Services.AddDbContext<CarServContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<CarServDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("CarServContextConnection")));
 
-builder.Services.AddDefaultIdentity<CarServUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<CarServContext>();
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<CarServDbContext>();
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -29,7 +29,9 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
 app.MapRazorPages();
+app.UseAuthentication();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

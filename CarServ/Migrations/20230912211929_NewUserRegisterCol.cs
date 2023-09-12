@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CarServ.Migrations
 {
     /// <inheritdoc />
-    public partial class CarService : Migration
+    public partial class NewUserRegisterCol : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

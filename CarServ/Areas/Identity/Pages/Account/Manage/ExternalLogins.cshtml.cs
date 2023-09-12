@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using CarServ.Areas.Identity.Data;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -17,14 +16,14 @@ namespace CarServ.Areas.Identity.Pages.Account.Manage
 {
     public class ExternalLoginsModel : PageModel
     {
-        private readonly UserManager<CarServUser> _userManager;
-        private readonly SignInManager<CarServUser> _signInManager;
-        private readonly IUserStore<CarServUser> _userStore;
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly IUserStore<IdentityUser> _userStore;
 
         public ExternalLoginsModel(
-            UserManager<CarServUser> userManager,
-            SignInManager<CarServUser> signInManager,
-            IUserStore<CarServUser> userStore)
+            UserManager<IdentityUser> userManager,
+            SignInManager<IdentityUser> signInManager,
+            IUserStore<IdentityUser> userStore)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -70,7 +69,7 @@ namespace CarServ.Areas.Identity.Pages.Account.Manage
                 .ToList();
 
             string passwordHash = null;
-            if (_userStore is IUserPasswordStore<CarServUser> userPasswordStore)
+            if (_userStore is IUserPasswordStore<IdentityUser> userPasswordStore)
             {
                 passwordHash = await userPasswordStore.GetPasswordHashAsync(user, HttpContext.RequestAborted);
             }
