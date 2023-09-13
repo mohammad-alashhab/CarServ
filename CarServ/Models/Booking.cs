@@ -3,9 +3,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CarServ.Models
 {
-                 
+    
     public class Booking
     {
+        [Key]
         [Required]
         [RegularExpression(@"[A-Za-z\s]{1,100}", ErrorMessage = "Invalid name format. Please use the format: 'First Name Last Name'")]
         public string YourName { get; set; }
