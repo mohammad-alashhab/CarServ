@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CarServ.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230913155012_InitialDbSetup")]
+    [Migration("20230913160026_InitialDbSetup")]
     partial class InitialDbSetup
     {
         /// <inheritdoc />
